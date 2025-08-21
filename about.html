@@ -1,0 +1,57 @@
+<!-- ...existing head... -->
+<body>
+    <!-- shared shell start -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="brand"><span class="brand-icon">🚘</span><span class="brand-text">Fleet Booking Docs</span></div>
+            <div class="search-wrap"><input id="docSearch" type="search" placeholder="Search pages…" aria-label="Search documentation"></div>
+        </div>
+        <div class="topbar-right">
+            <button id="themeToggle" class="icon-btn" title="Toggle theme">🌙</button>
+            <button id="menuToggle" class="icon-btn mob-only" title="Menu">☰</button>
+        </div>
+    </header>
+
+    <div class="docs-layout with-topbar">
+        <aside class="sidebar">
+            <div class="sidebar-title">Fleet Booking Docs</div>
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="index.html" data-page="home">Home</a></li>
+                    <li class="nav-section">Getting Started</li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li><a href="installation.html">Installation</a></li>
+                    <li><a href="user-guide.html">User Guide</a></li>
+                    <li class="nav-section">For Developers</li>
+                    <li><a href="developer-guide.html">Developer Guide</a></li>
+                    <li><a href="api.html">API Reference</a></li>
+                    <li class="nav-section">Reference</li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="changelog.html">Changelog</a></li>
+                    <li class="nav-section">Project</li>
+                    <li><a href="about.html">About / License</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="docs-content" id="main-content" role="main">
+            <div class="doc-container">
+                <!-- ...existing about.html content (leave as-is) ... -->
+            </div>
+        </main>
+
+        <aside class="on-this-page">
+            <div class="on-this-page-title">On This Page</div>
+            <ul id="on-this-page-list"></ul>
+        </aside>
+    </div>
+
+    <footer class="footer-bar" role="contentinfo">
+        <nav class="footer-nav" aria-label="Documentation page navigation"></nav>
+        <div class="footer-meta">&copy; 2025 Alfastack Solution Private Limited</div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

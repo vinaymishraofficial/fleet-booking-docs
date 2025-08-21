@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Installation Guide - Fleet Booking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Complete installation guide for Fleet Booking System on ERPNext">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-content">
+            <div class="topbar-left">
+                <h1 class="topbar-title">🚗 Fleet Booking System</h1>
+                <span class="topbar-tagline">Enterprise Fleet Management Platform</span>
+            </div>
+            <div class="topbar-right">
+                <nav class="topbar-nav">
+                    <a href="index.html">Overview</a>
+                    <a href="user-guide.html">User Guide</a>
+                    <a href="api.html">API</a>
+                    <a href="installation.html" class="btn-primary">Install Now</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="docs-layout">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Fleet Booking System</h3>
+                    <ul>
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="#prerequisites">Prerequisites</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Get Started</h3>
+                    <ul>
+                        <li><a href="#installation" class="active">Installation</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                        <li><a href="api.html">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Advanced</h3>
+                    <ul>
+                        <li><a href="developer-guide.html">Developer Guide</a></li>
+                        <li><a href="changelog.html">What's New</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="docs-content">
+            <div class="doc-container">
+                <h1>Installation Guide</h1>
+                <p class="lead">Deploy Fleet Booking System on your ERPNext instance in minutes with this comprehensive installation guide.</p>
+
+                <section id="prerequisites">
+                    <h2>Prerequisites</h2>
+                    <div class="alert alert-info">
+                        <h4>Before You Begin</h4>
+                        <p>Ensure you have the following requirements met before installing Fleet Booking System.</p>
+                    </div>
+                    
+                    <h3>System Requirements</h3>
+                    <ul>
+                        <li><strong>ERPNext:</strong> Version 13.0 or higher</li>
+                        <li><strong>Frappe Framework:</strong> Version 13.0 or higher</li>
+                        <li><strong>Python:</strong> Version 3.7 or higher</li>
+                        <li><strong>Node.js:</strong> Version 14.0 or higher</li>
+                    </ul>
+
+                    <h3>Required Permissions</h3>
+                    <ul>
+                        <li>System Manager role in ERPNext</li>
+                        <li>SSH access to your server</li>
+                        <li>Git access to clone repositories</li>
+                    </ul>
+
+                    <h3>Optional Services</h3>
+                    <ul>
+                        <li><strong>Google Maps API:</strong> For route planning and location services</li>
+                        <li><strong>SMTP Server:</strong> For email notifications</li>
+                    </ul>
+                </section>
+
+                <section id="installation">
+                    <h2>Installation Steps</h2>
+                    
+                    <div class="step-guide">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Download Fleet Booking System</h3>
+                                <p>Clone the Fleet Booking System app to your bench:</p>
+                                <div class="code-block">
+                                    <code>bench get-app https://github.com/alfastack-in/fleet_booking.git</code>
+                                </div>
+                                <p>Or if you have access to a local repository:</p>
+                                <div class="code-block">
+                                    <code>bench get-app fleet_booking</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Install on Your Site</h3>
+                                <p>Install the app on your ERPNext site:</p>
+                                <div class="code-block">
+                                    <code>bench --site [your-site-name] install-app fleet_booking</code>
+                                </div>
+                                <p>Replace <code>[your-site-name]</code> with your actual site name.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Restart Services</h3>
+                                <p>Restart bench to apply changes:</p>
+                                <div class="code-block">
+                                    <code>bench restart</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Verify Installation</h3>
+                                <p>Log into your ERPNext instance and verify the installation:</p>
+                                <ol>
+                                    <li>Go to <strong>Setup > Applications</strong></li>
+                                    <li>Look for "Fleet Booking System" in the installed apps list</li>
+                                    <li>Check that the app status shows as "Installed"</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="configuration">
+                    <h2>Initial Configuration</h2>
+                    
+                    <h3>Set Up Google Maps Integration</h3>
+                    <ol>
+                        <li>Go to <strong>Fleet Booking System > Fleet Booking Settings</strong></li>
+                        <li>Enter your Google Maps API key</li>
+                        <li>Enable the features you want to use</li>
+                        <li>Save the settings</li>
+                    </ol>
+
+                    <div class="alert alert-warning">
+                        <h4>Google Maps API Key</h4>
+                        <p>You'll need a Google Maps API key with the following APIs enabled:</p>
+                        <ul>
+                            <li>Maps JavaScript API</li>
+                            <li>Geocoding API</li>
+                            <li>Directions API</li>
+                            <li>Places API</li>
+                        </ul>
+                    </div>
+
+                    <h3>Configure User Roles</h3>
+                    <p>Set up the following roles for your users:</p>
+                    <div class="role-grid">
+                        <div class="role-card">
+                            <h4>Employee</h4>
+                            <p>Can create and submit fleet booking requests</p>
+                        </div>
+                        <div class="role-card">
+                            <h4>Fleet Manager</h4>
+                            <p>Can approve requests and assign vehicles/drivers</p>
+                        </div>
+                        <div class="role-card">
+                            <h4>Driver</h4>
+                            <p>Can access driver dashboard and manage trips</p>
+                        </div>
+                        <div class="role-card">
+                            <h4>Dispatcher</h4>
+                            <p>Can monitor all fleet operations</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="troubleshooting">
+                    <h2>Troubleshooting</h2>
+                    
+                    <h3>Common Issues</h3>
+                    
+                    <div class="faq-item">
+                        <h4>Installation fails with permission error</h4>
+                        <p>Ensure you have proper permissions and try running with sudo if necessary:</p>
+                        <div class="code-block">
+                            <code>sudo bench get-app fleet_booking</code>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>App not showing in ERPNext</h4>
+                        <p>Clear cache and reload:</p>
+                        <div class="code-block">
+                            <code>bench --site [your-site-name] clear-cache<br>bench restart</code>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Google Maps not loading</h4>
+                        <p>Check that your API key is valid and has the required APIs enabled. Verify the key in Fleet Booking Settings.</p>
+                    </div>
+                </section>
+
+                <section id="next-steps">
+                    <h2>Next Steps</h2>
+                    <div class="next-actions">
+                        <a href="user-guide.html" class="action-card">
+                            <h3>📚 User Guide</h3>
+                            <p>Learn how to use Fleet Booking System effectively</p>
+                        </a>
+                        <a href="api.html" class="action-card">
+                            <h3>🔧 API Reference</h3>
+                            <p>Integrate Fleet Booking System with your applications</p>
+                        </a>
+                        <a href="developer-guide.html" class="action-card">
+                            <h3>💻 Developer Guide</h3>
+                            <p>Customize and extend Fleet Booking System</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="toc-content">
+                <h3>In this article</h3>
+                <ul>
+                    <li><a href="#prerequisites">Prerequisites</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#configuration">Configuration</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                    <li><a href="#next-steps">Next Steps</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="changelog.html">What's New</a>
+                <a href="faq.html">FAQ</a>
+                <a href="developer-guide.html">Developer Guide</a>
+            </div>
+                        <div class="footer-info">
+                <p>&copy; 2025 Made by Alfastack Solutions Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

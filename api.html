@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-page="api">
+<head>
+    <meta charset="utf-8">
+    <title>API Reference - Fleet Booking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Complete API reference for Fleet Booking System">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-content">
+            <div class="topbar-left">
+                <h1 class="topbar-title">🚗 Fleet Booking System</h1>
+                <span class="topbar-tagline">Enterprise Fleet Management Platform</span>
+            </div>
+            <div class="topbar-right">
+                <nav class="topbar-nav">
+                    <a href="index.html">Overview</a>
+                    <a href="user-guide.html">User Guide</a>
+                    <a href="api.html">API</a>
+                    <a href="installation.html" class="btn-primary">Install Now</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="docs-layout with-topbar">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Fleet Booking System</h3>
+                    <ul>
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="#authentication">Authentication</a></li>
+                        <li><a href="#endpoints">API Endpoints</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Get Started</h3>
+                    <ul>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                        <li><a href="#endpoints" class="active">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Advanced</h3>
+                    <ul>
+                        <li><a href="developer-guide.html">Developer Guide</a></li>
+                        <li><a href="changelog.html">What's New</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="docs-content" id="main-content" role="main">
+            <div class="doc-container">
+                <h1>API Reference</h1>
+                <p class="lead">Comprehensive API documentation for integrating Fleet Booking System with your applications.</p>
+
+                <section id="authentication">
+                    <h2>Authentication</h2>
+                    <p>Fleet Booking System uses ERPNext's built-in authentication system. All API calls must include proper authentication headers.</p>
+                    
+                    <h3>API Key Authentication</h3>
+                    <div class="code-block">
+                        <code>
+curl -X GET "https://your-site.com/api/method/fleet_booking.api.get_trip_plan" 
+  -H "Authorization: token [api_key]:[api_secret]"
+                        </code>
+                    </div>
+
+                    <h3>Session Authentication</h3>
+                    <p>For web applications, you can use session-based authentication by logging in through ERPNext's login API.</p>
+                </section>
+
+                <section id="endpoints">
+                    <h2>API Endpoints</h2>
+                    
+                    <div class="api-section">
+                        <h3>Configuration & Settings</h3>
+                        
+                        <div class="api-endpoint">
+                            <div class="endpoint-header">
+                                <span class="method get">GET</span>
+                                <span class="path">/api/method/fleet_booking.api.get_google_maps_key</span>
+                            </div>
+                            <div class="endpoint-description">
+                                <p>Retrieve the Google Maps API key for frontend map integration.</p>
+                                <h4>Response</h4>
+                                <div class="code-block">
+                                    <code>
+{
+  "message": {
+    "api_key": "your_google_maps_api_key"
+  }
+}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="api-section">
+                        <h3>Trip Management</h3>
+                        
+                        <div class="api-endpoint">
+                            <div class="endpoint-header">
+                                <span class="method get">GET</span>
+                                <span class="path">/api/method/fleet_booking.api.get_trip_plan</span>
+                            </div>
+                            <div class="endpoint-description">
+                                <p>Get detailed trip plan including route points and stopovers.</p>
+                                <h4>Parameters</h4>
+                                <ul>
+                                    <li><code>trip_id</code> (string): ID of the fleet booking request</li>
+                                </ul>
+                                <h4>Response</h4>
+                                <div class="code-block">
+                                    <code>
+{
+  "message": {
+    "pickup": {
+      "lat": 28.6139,
+      "lng": 77.2090,
+      "address": "New Delhi, India"
+    },
+    "drop": {
+      "lat": 28.7041,
+      "lng": 77.1025,
+      "address": "Gurgaon, India"
+    },
+    "stopovers": [
+      {
+        "lat": 28.6500,
+        "lng": 77.2300,
+        "address": "Connaught Place, New Delhi"
+      }
+    ]
+  }
+}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="api-section">
+                        <h3>Driver Operations</h3>
+                        
+                        <div class="api-endpoint">
+                            <div class="endpoint-header">
+                                <span class="method get">GET</span>
+                                <span class="path">/api/method/fleet_booking.api.get_assigned_trips</span>
+                            </div>
+                            <div class="endpoint-description">
+                                <p>Get list of trips assigned to the current driver.</p>
+                                <h4>Response</h4>
+                                <div class="code-block">
+                                    <code>
+{
+  "message": [
+    {
+      "name": "FLEET-REQ-2025-001",
+      "employee_name": "John Doe",
+      "contact_no": "+91-9876543210",
+      "vehicle_assigned": "DL-01-AB-1234",
+      "pickup_location": "Office Complex, Delhi",
+      "drop_location": "Airport, Delhi",
+      "trip_date": "2025-08-21",
+      "status": "Approved"
+    }
+  ]
+}
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="webhook-events">
+                    <h2>Webhook Events</h2>
+                    <p>Fleet Booking System can trigger webhooks for various events in the booking lifecycle.</p>
+                    
+                    <h3>Available Events</h3>
+                    <ul>
+                        <li><code>booking_request_created</code>: New booking request submitted</li>
+                        <li><code>booking_request_approved</code>: Request approved by fleet manager</li>
+                        <li><code>booking_request_rejected</code>: Request rejected by fleet manager</li>
+                        <li><code>vehicle_assigned</code>: Vehicle assigned to approved request</li>
+                        <li><code>driver_assigned</code>: Driver assigned to approved request</li>
+                        <li><code>trip_started</code>: Driver started the trip</li>
+                        <li><code>trip_completed</code>: Driver completed the trip</li>
+                    </ul>
+
+                    <h3>Webhook Payload Example</h3>
+                    <div class="code-block">
+                        <code>
+{
+  "event": "booking_request_approved",
+  "timestamp": "2025-08-21T10:30:00.000Z",
+  "data": {
+    "request_id": "FLEET-REQ-2025-001",
+    "employee": "john.doe@company.com",
+    "trip_date": "2025-08-25",
+    "status": "Approved",
+    "approved_by": "fleet.manager@company.com"
+  }
+}
+                        </code>
+                    </div>
+                </section>
+
+                <section id="error-handling">
+                    <h2>Error Handling</h2>
+                    <p>Fleet Booking System APIs return standard HTTP status codes and error messages.</p>
+                    
+                    <h3>Error Response Format</h3>
+                    <div class="code-block">
+                        <code>
+{
+  "exc_type": "ValidationError",
+  "exception": "Invalid trip_id provided",
+  "message": "The specified trip ID does not exist or is not accessible."
+}
+                        </code>
+                    </div>
+
+                    <h3>Common Error Codes</h3>
+                    <ul>
+                        <li><code>400 Bad Request</code>: Invalid parameters or request format</li>
+                        <li><code>401 Unauthorized</code>: Missing or invalid authentication</li>
+                        <li><code>403 Forbidden</code>: Insufficient permissions</li>
+                        <li><code>404 Not Found</code>: Resource not found</li>
+                        <li><code>500 Internal Server Error</code>: Server-side error</li>
+                    </ul>
+                </section>
+
+                <section id="rate-limiting">
+                    <h2>Rate Limiting</h2>
+                    <p>API calls are subject to rate limiting to ensure system stability:</p>
+                    <ul>
+                        <li><strong>General APIs:</strong> 1000 requests per hour per user</li>
+                        <li><strong>Location Updates:</strong> 60 requests per minute (for real-time tracking)</li>
+                        <li><strong>Trip Operations:</strong> 100 requests per hour per driver</li>
+                    </ul>
+                    
+                    <p>Rate limit headers are included in API responses:</p>
+                    <div class="code-block">
+                        <code>
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 999
+X-RateLimit-Reset: 1629543600
+                        </code>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="toc-content">
+                <h3>In this article</h3>
+                <ul>
+                    <li><a href="#authentication">Authentication</a></li>
+                    <li><a href="#endpoints">API Endpoints</a></li>
+                    <li><a href="#webhook-events">Webhook Events</a></li>
+                    <li><a href="#error-handling">Error Handling</a></li>
+                    <li><a href="#rate-limiting">Rate Limiting</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-bar"><nav class="footer-nav"></nav><div class="footer-meta">&copy; 2025 Alfastack Solution Private Limited</div></footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

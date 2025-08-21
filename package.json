@@ -1,0 +1,23 @@
+{
+  "name": "fleet-booking-docs",
+  "version": "1.0.0",
+  "description": "Fleet Booking System Documentation Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'Static site - no build required'",
+    "dev": "serve . -p 3000"
+  },
+  "keywords": [
+    "fleet",
+    "booking",
+    "erpnext",
+    "documentation",
+    "enterprise"
+  ],
+  "author": "Fleet Booking System",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - Fleet Booking System Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-content">
+            <div class="topbar-left">
+                <h1 class="topbar-title">Fleet Booking System</h1>
+                <span class="topbar-tagline">Complete Vehicle Management Solution</span>
+            </div>
+            <nav class="topbar-nav">
+                <a href="index.html">Home</a>
+                <a href="installation.html">Installation</a>
+                <a href="user-guide.html">User Guide</a>
+                <a href="api.html">API Reference</a>
+                <a href="developer-guide.html">Developer Guide</a>
+                <a href="changelog.html">What's New</a>
+                <a href="faq.html">FAQ</a>
+                <a href="installation.html" class="btn-primary">Install Now</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Getting Started</h3>
+                    <ul>
+                        <li><a href="introduction.html" class="active">Introduction</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Development</h3>
+                    <ul>
+                        <li><a href="developer-guide.html">Developer Guide</a></li>
+                        <li><a href="api.html">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="changelog.html">What's New</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="docs-content">
+            <div class="doc-container">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <h1>Introduction to Fleet Booking System</h1>
+                    <p class="lead">A comprehensive vehicle management solution built for ERPNext, designed to streamline fleet operations, booking requests, and driver management with real-time tracking capabilities.</p>
+                </div>
+
+                <!-- In This Article Section -->
+                <div class="toc-inline">
+                    <h3>In this article</h3>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#key-features">Key Features</a></li>
+                        <li><a href="#system-architecture">System Architecture</a></li>
+                        <li><a href="#user-roles">User Roles</a></li>
+                        <li><a href="#modules">Core Modules</a></li>
+                        <li><a href="#integration">Integration Capabilities</a></li>
+                        <li><a href="#next-steps">Next Steps</a></li>
+                    </ul>
+                </div>
+
+                <!-- Overview Section -->
+                <section id="overview">
+                    <h2>Overview</h2>
+                    <p>The Fleet Booking System is an enterprise-grade vehicle management solution that transforms how organizations handle their transportation needs. Built as a native ERPNext application, it provides seamless integration with existing business processes while offering powerful standalone capabilities.</p>
+                    
+                    <div class="alert alert-info">
+                        <h4>💡 Perfect for</h4>
+                        <p>Organizations with vehicle fleets, employee transportation needs, delivery services, and any business requiring systematic vehicle allocation and tracking.</p>
+                    </div>
+                </section>
+
+                <!-- Key Features Section -->
+                <section id="key-features">
+                    <h2>Key Features</h2>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>🚗 Fleet Management</h4>
+                            <p>Complete vehicle lifecycle management with maintenance tracking, document management, and availability monitoring.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>📱 Real-time Tracking</h4>
+                            <p>GPS-based location tracking with Google Maps integration for live vehicle monitoring and route optimization.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>👥 Multi-role Dashboard</h4>
+                            <p>Specialized interfaces for employees, drivers, dispatchers, and fleet managers with role-based access control.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🔄 Automated Workflows</h4>
+                            <p>Intelligent booking approval processes with automated notifications and status updates.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>📊 Analytics & Reporting</h4>
+                            <p>Comprehensive reporting with usage analytics, cost tracking, and performance metrics.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🔌 API Integration</h4>
+                            <p>RESTful APIs for third-party integrations with webhooks and real-time data synchronization.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- System Architecture Section -->
+                <section id="system-architecture">
+                    <h2>System Architecture</h2>
+                    <p>The Fleet Booking System follows a modular architecture designed for scalability and maintainability:</p>
+                    
+                    <div class="step-guide">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Core Framework</h3>
+                                <p>Built on ERPNext/Frappe framework providing robust data management, user authentication, and workflow capabilities.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Modular Design</h3>
+                                <p>Organized into independent modules for booking management, driver operations, fleet tracking, and dispatcher coordination.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>External Integrations</h3>
+                                <p>Google Maps API for mapping and tracking, notification services for real-time updates, and third-party system connectors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- User Roles Section -->
+                <section id="user-roles">
+                    <h2>User Roles</h2>
+                    <div class="role-grid">
+                        <div class="role-card">
+                            <h4>👤 Employee</h4>
+                            <p>Submit booking requests, track trip status, manage personal transportation needs</p>
+                        </div>
+                        <div class="role-card">
+                            <h4>👨‍💼 Fleet Manager</h4>
+                            <p>Oversee fleet operations, approve requests, manage vehicle allocation and maintenance</p>
+                        </div>
+                        <div class="role-card">
+                            <h4>🚗 Driver</h4>
+                            <p>Access driver dashboard, manage trips, update location, communicate trip status</p>
+                        </div>
+                        <div class="role-card">
+                            <h4>📋 Dispatcher</h4>
+                            <p>Coordinate operations, monitor real-time status, optimize routes and assignments</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Core Modules Section -->
+                <section id="modules">
+                    <h2>Core Modules</h2>
+                    <div class="role-sections">
+                        <div class="role-section">
+                            <h3>🎯 Booking Management</h3>
+                            <p>Comprehensive request lifecycle management from submission to completion.</p>
+                            <h4>Key Components:</h4>
+                            <ul>
+                                <li>Employee Fleet Booking Request</li>
+                                <li>Automated approval workflows</li>
+                                <li>Status tracking and notifications</li>
+                                <li>Recurring booking support</li>
+                            </ul>
+                        </div>
+                        <div class="role-section">
+                            <h3>🚛 Fleet Operations</h3>
+                            <p>Complete vehicle management with maintenance and availability tracking.</p>
+                            <h4>Key Components:</h4>
+                            <ul>
+                                <li>Vehicle registration and documentation</li>
+                                <li>Maintenance scheduling and tracking</li>
+                                <li>Availability management</li>
+                                <li>Cost and usage analytics</li>
+                            </ul>
+                        </div>
+                        <div class="role-section">
+                            <h3>📱 Driver Portal</h3>
+                            <p>Dedicated interface for drivers with trip management and tracking capabilities.</p>
+                            <h4>Key Components:</h4>
+                            <ul>
+                                <li>Real-time trip dashboard</li>
+                                <li>GPS location sharing</li>
+                                <li>Trip status updates</li>
+                                <li>Communication tools</li>
+                            </ul>
+                        </div>
+                        <div class="role-section">
+                            <h3>🗺️ Tracking & Routes</h3>
+                            <p>Advanced mapping and route management with Google Maps integration.</p>
+                            <h4>Key Components:</h4>
+                            <ul>
+                                <li>Real-time GPS tracking</li>
+                                <li>Route optimization</li>
+                                <li>Geofencing capabilities</li>
+                                <li>Interactive mapping interface</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Integration Capabilities -->
+                <section id="integration">
+                    <h2>Integration Capabilities</h2>
+                    <p>The Fleet Booking System offers extensive integration options:</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>🔗 ERPNext Native</h4>
+                            <p>Seamless integration with ERPNext modules including HR, Accounting, and Project Management.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🌐 REST APIs</h4>
+                            <p>Comprehensive API endpoints for external system integration with authentication and rate limiting.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>📧 Notification Systems</h4>
+                            <p>Email, SMS, and push notification support with customizable templates and triggers.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🗺️ Mapping Services</h4>
+                            <p>Google Maps API integration for location services, routing, and real-time tracking.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Next Steps -->
+                <section id="next-steps">
+                    <h2>Next Steps</h2>
+                    <p>Ready to get started with Fleet Booking System? Choose your path:</p>
+                    
+                    <div class="next-actions">
+                        <a href="installation.html" class="action-card">
+                            <h3>🚀 Quick Installation</h3>
+                            <p>Get up and running in minutes with our step-by-step installation guide.</p>
+                        </a>
+                        <a href="user-guide.html" class="action-card">
+                            <h3>📖 User Guide</h3>
+                            <p>Learn how to use all features with comprehensive user documentation.</p>
+                        </a>
+                        <a href="developer-guide.html" class="action-card">
+                            <h3>⚙️ Developer Guide</h3>
+                            <p>Extend and customize the system with our developer documentation.</p>
+                        </a>
+                        <a href="api.html" class="action-card">
+                            <h3>🔌 API Reference</h3>
+                            <p>Integrate with external systems using our comprehensive API documentation.</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <div class="toc-content">
+                <h3>On this page</h3>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#key-features">Key Features</a></li>
+                    <li><a href="#system-architecture">System Architecture</a></li>
+                    <li><a href="#user-roles">User Roles</a></li>
+                    <li><a href="#modules">Core Modules</a></li>
+                    <li><a href="#integration">Integration Capabilities</a></li>
+                    <li><a href="#next-steps">Next Steps</a></li>
+                </ul>
+                <div class="toc-next">
+                    <strong>Next</strong>
+                    <a href="installation.html" class="btn-next">Installation Guide →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="installation.html">Installation</a>
+                <a href="user-guide.html">User Guide</a>
+                <a href="api.html">API Reference</a>
+                <a href="developer-guide.html">Developer Guide</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Made by Alfastack Solutions Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

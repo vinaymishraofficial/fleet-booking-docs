@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Guide - Fleet Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-content">
+            <div class="topbar-left">
+                <h1 class="topbar-title">Fleet Booking System</h1>
+                <span class="topbar-tagline">Professional Fleet Management for ERPNext</span>
+            </div>
+            <nav class="topbar-nav">
+                <a href="index.html">Home</a>
+                <a href="installation.html">Installation</a>
+                <a href="user-guide.html">User Guide</a>
+                <a href="api.html">API Reference</a>
+                <a href="developer-guide.html" class="active">Developer Guide</a>
+                <a href="changelog.html">What's New</a>
+                <a href="faq.html">FAQ</a>
+                <a href="#" class="btn-primary">Install Now</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Getting Started</h3>
+                    <ul>
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Reference</h3>
+                    <ul>
+                        <li><a href="api.html">API Reference</a></li>
+                        <li><a href="developer-guide.html" class="active">Developer Guide</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="changelog.html">What's New</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="docs-content">
+            <div class="doc-container">
+                <h1>Developer Guide</h1>
+                <p class="lead">Comprehensive guide for developers to customize, extend, and contribute to the Fleet Booking System.</p>
+
+                <!-- Architecture Overview -->
+                <div class="api-section">
+                    <h3>🏗️ Architecture Overview</h3>
+                    
+                    <p>Fleet Booking System is built on top of ERPNext framework using modern web technologies. Understanding the architecture will help you customize and extend the application effectively.</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>ERPNext Framework</h4>
+                            <p>Built on top of ERPNext using Frappe framework with Python backend and JavaScript frontend.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Modern Frontend</h4>
+                            <p>Responsive UI using HTML5, CSS3, and vanilla JavaScript with ERPNext's built-in components.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>RESTful APIs</h4>
+                            <p>Well-documented REST APIs for integration with external systems and mobile applications.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Real-time Features</h4>
+                            <p>WebSocket-based real-time updates for GPS tracking and live notifications.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development Setup -->
+                <div class="api-section">
+                    <h3>🚀 Development Setup</h3>
+                    
+                    <div class="alert alert-info">
+                        <h4>Prerequisites</h4>
+                        <p>Ensure you have ERPNext development environment set up before proceeding.</p>
+                    </div>
+
+                    <div class="step-guide">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Clone the Repository</h3>
+                                <p>Get the source code from GitHub repository.</p>
+                                <div class="code-block">
+                                    <code>cd frappe-bench/apps
+git clone https://github.com/alfastack-in/fleet_booking.git
+cd fleet_booking</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Install in Development Mode</h3>
+                                <p>Install the app in development mode for live reloading.</p>
+                                <div class="code-block">
+                                    <code>bench --site your-site install-app fleet_booking
+bench --site your-site set-config developer_mode 1
+bench --site your-site clear-cache</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Enable Debug Mode</h3>
+                                <p>Enable debugging and error reporting for development.</p>
+                                <div class="code-block">
+                                    <code>bench --site your-site set-config allow_tests true
+bench --site your-site console</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Structure -->
+                <div class="api-section">
+                    <h3>📁 Project Structure</h3>
+                    
+                    <p>Understanding the project structure will help you navigate and modify the codebase effectively.</p>
+
+                    <div class="code-block">
+                        <code>fleet_booking/
+├── fleet_booking_system/          # Main module
+│   ├── doctype/                   # Document types
+│   │   ├── employee_fleet_booking_request/
+│   │   ├── fleet_booking_settings/
+│   │   ├── fleet_bookings_dispatcher_portal/
+│   │   ├── fleet_bookings_driver_portal/
+│   │   └── fleet_request_routes/
+│   ├── page/                      # Custom pages
+│   │   └── driver_dashboard/
+│   └── workspace/                 # Workspaces
+├── public/                        # Static assets
+│   ├── css/                       # Stylesheets
+│   ├── js/                        # JavaScript files
+│   ├── img/                       # Images
+│   └── audio/                     # Audio files
+├── templates/                     # Email and page templates
+├── www/                          # Web pages
+├── api.py                        # API endpoints
+├── hooks.py                      # Application hooks
+└── modules.txt                   # Module definition</code>
+                    </div>
+                </div>
+
+                <!-- Custom DocTypes -->
+                <div class="api-section">
+                    <h3>📄 Custom DocTypes</h3>
+                    
+                    <p>Fleet Booking System includes several custom DocTypes that handle different aspects of fleet management.</p>
+
+                    <div class="role-sections">
+                        <div class="role-section">
+                            <h3>Employee Fleet Booking Request</h3>
+                            <p>Core DocType for managing booking requests from employees.</p>
+                            <h4>Key Fields:</h4>
+                            <ul>
+                                <li><code>employee</code> - Link to Employee master</li>
+                                <li><code>booking_date</code> - Date for the booking</li>
+                                <li><code>from_time</code>, <code>to_time</code> - Time slots</li>
+                                <li><code>pickup_location</code>, <code>drop_location</code> - Journey points</li>
+                                <li><code>purpose</code> - Reason for booking</li>
+                                <li><code>vehicle</code> - Assigned vehicle</li>
+                                <li><code>driver</code> - Assigned driver</li>
+                                <li><code>status</code> - Current booking status</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-section">
+                            <h3>Fleet Booking Settings</h3>
+                            <p>Configuration DocType for system-wide settings.</p>
+                            <h4>Configuration Options:</h4>
+                            <ul>
+                                <li>Google Maps API integration</li>
+                                <li>Notification settings</li>
+                                <li>Workflow configurations</li>
+                                <li>Driver dashboard settings</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-section">
+                            <h3>Fleet Request Routes</h3>
+                            <p>Manages route information and optimization.</p>
+                            <h4>Route Management:</h4>
+                            <ul>
+                                <li>GPS coordinates storage</li>
+                                <li>Route optimization algorithms</li>
+                                <li>Distance and time calculations</li>
+                                <li>Real-time traffic integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- API Development -->
+                <div class="api-section">
+                    <h3>🔌 API Development</h3>
+                    
+                    <p>Learn how to create custom API endpoints and extend existing functionality.</p>
+
+                    <h4>Creating Custom Endpoints</h4>
+                    <div class="code-block">
+                        <code># In api.py
+import frappe
+from frappe import _
+
+@frappe.whitelist()
+def get_vehicle_status(vehicle_id):
+    """Get real-time status of a vehicle"""
+    vehicle = frappe.get_doc("Vehicle", vehicle_id)
+    
+    # Get current bookings
+    current_bookings = frappe.get_all(
+        "Employee Fleet Booking Request",
+        filters={
+            "vehicle": vehicle_id,
+            "status": "Approved",
+            "booking_date": frappe.utils.today()
+        },
+        fields=["name", "from_time", "to_time", "employee"]
+    )
+    
+    return {
+        "vehicle": vehicle.as_dict(),
+        "current_bookings": current_bookings,
+        "is_available": len(current_bookings) == 0
+    }</code>
+                    </div>
+
+                    <h4>Adding Validation Logic</h4>
+                    <div class="code-block">
+                        <code># In employee_fleet_booking_request.py
+def validate(self):
+    """Custom validation for booking requests"""
+    self.validate_booking_time()
+    self.validate_vehicle_availability()
+    self.calculate_route_distance()
+
+def validate_vehicle_availability(self):
+    """Check if vehicle is available for the requested time"""
+    conflicts = frappe.get_all(
+        "Employee Fleet Booking Request",
+        filters={
+            "vehicle": self.vehicle,
+            "booking_date": self.booking_date,
+            "status": ["in", ["Approved", "Pending"]],
+            "name": ["!=", self.name]
+        }
+    )
+    
+    for conflict in conflicts:
+        # Check time overlap logic
+        if self.has_time_conflict(conflict):
+            frappe.throw(_("Vehicle is not available during the requested time"))</code>
+                    </div>
+                </div>
+
+                <!-- Frontend Customization -->
+                <div class="api-section">
+                    <h3>🎨 Frontend Customization</h3>
+                    
+                    <p>Customize the user interface and add new features to enhance user experience.</p>
+
+                    <h4>Custom JavaScript</h4>
+                    <div class="code-block">
+                        <code>// In employee_fleet_booking_request.js
+frappe.ui.form.on('Employee Fleet Booking Request', {
+    refresh: function(frm) {
+        // Add custom button
+        if (frm.doc.status === 'Approved') {
+            frm.add_custom_button(__('Track Vehicle'), function() {
+                open_vehicle_tracking(frm.doc.vehicle);
+            });
+        }
+        
+        // Set up real-time updates
+        setup_realtime_updates(frm);
+    },
+    
+    pickup_location: function(frm) {
+        // Auto-calculate route when locations change
+        if (frm.doc.pickup_location && frm.doc.drop_location) {
+            calculate_route_distance(frm);
+        }
+    }
+});
+
+function calculate_route_distance(frm) {
+    frappe.call({
+        method: 'fleet_booking.api.calculate_route',
+        args: {
+            pickup: frm.doc.pickup_location,
+            drop: frm.doc.drop_location
+        },
+        callback: function(r) {
+            if (r.message) {
+                frm.set_value('estimated_distance', r.message.distance);
+                frm.set_value('estimated_time', r.message.duration);
+            }
+        }
+    });
+}</code>
+                    </div>
+
+                    <h4>Custom CSS Styling</h4>
+                    <div class="code-block">
+                        <code>/* In public/css/driver_dashboard.css */
+.driver-dashboard {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.trip-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.2s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.status-approved { background-color: #28a745; }
+.status-pending { background-color: #ffc107; }
+.status-cancelled { background-color: #dc3545; }</code>
+                    </div>
+                </div>
+
+                <!-- Testing -->
+                <div class="api-section">
+                    <h3>🧪 Testing</h3>
+                    
+                    <p>Write comprehensive tests to ensure your customizations work correctly.</p>
+
+                    <h4>Unit Tests</h4>
+                    <div class="code-block">
+                        <code># In test_employee_fleet_booking_request.py
+import frappe
+import unittest
+from frappe.utils import today, add_days
+
+class TestEmployeeFleetBookingRequest(unittest.TestCase):
+    
+    def setUp(self):
+        """Set up test data"""
+        self.employee = frappe.get_doc({
+            "doctype": "Employee",
+            "employee_name": "Test Employee",
+            "status": "Active"
+        }).insert()
+        
+        self.vehicle = frappe.get_doc({
+            "doctype": "Vehicle",
+            "license_plate": "TEST123",
+            "model": "Test Model"
+        }).insert()
+    
+    def test_booking_creation(self):
+        """Test successful booking creation"""
+        booking = frappe.get_doc({
+            "doctype": "Employee Fleet Booking Request",
+            "employee": self.employee.name,
+            "booking_date": today(),
+            "from_time": "09:00:00",
+            "to_time": "17:00:00",
+            "pickup_location": "Office",
+            "drop_location": "Airport",
+            "purpose": "Business Travel"
+        })
+        
+        booking.insert()
+        self.assertEqual(booking.status, "Pending")
+    
+    def test_vehicle_conflict(self):
+        """Test vehicle availability validation"""
+        # Create first booking
+        booking1 = create_test_booking(
+            vehicle=self.vehicle.name,
+            from_time="09:00:00",
+            to_time="12:00:00"
+        )
+        booking1.insert()
+        
+        # Try to create conflicting booking
+        booking2 = create_test_booking(
+            vehicle=self.vehicle.name,
+            from_time="10:00:00",
+            to_time="14:00:00"
+        )
+        
+        with self.assertRaises(frappe.ValidationError):
+            booking2.insert()</code>
+                    </div>
+
+                    <h4>Integration Tests</h4>
+                    <div class="code-block">
+                        <code># Test API endpoints
+def test_api_endpoints(self):
+    """Test API functionality"""
+    # Test vehicle status API
+    response = frappe.call(
+        "fleet_booking.api.get_vehicle_status",
+        vehicle_id=self.vehicle.name
+    )
+    
+    self.assertIn("vehicle", response)
+    self.assertIn("is_available", response)
+    
+    # Test route calculation API
+    route_response = frappe.call(
+        "fleet_booking.api.calculate_route",
+        pickup="Office Address",
+        drop="Airport Address"
+    )
+    
+    self.assertIn("distance", route_response)
+    self.assertIn("duration", route_response)</code>
+                    </div>
+                </div>
+
+                <!-- Deployment -->
+                <div class="api-section">
+                    <h3>🚀 Deployment</h3>
+                    
+                    <p>Best practices for deploying your customizations to production.</p>
+
+                    <div class="step-guide">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Version Control</h3>
+                                <p>Maintain proper version control with semantic versioning.</p>
+                                <div class="code-block">
+                                    <code>git tag -a v2.1.0 -m "Release version 2.1.0"
+git push origin v2.1.0</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Production Deployment</h3>
+                                <p>Deploy to production environment safely.</p>
+                                <div class="code-block">
+                                    <code>bench --site production.site backup --with-files
+bench get-app fleet_booking
+bench --site production.site install-app fleet_booking
+bench --site production.site migrate
+bench restart</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Monitoring</h3>
+                                <p>Set up monitoring and logging for production.</p>
+                                <div class="code-block">
+                                    <code>bench --site production.site doctor
+bench --site production.site backup-all-sites
+bench setup supervisor
+bench setup nginx</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contributing -->
+                <div class="api-section">
+                    <h3>🤝 Contributing</h3>
+                    
+                    <p>Help improve Fleet Booking System by contributing to the project.</p>
+
+                    <div class="alert alert-info">
+                        <h4>Contribution Guidelines</h4>
+                        <p>Please read our contribution guidelines before submitting pull requests.</p>
+                    </div>
+
+                    <h4>Development Workflow</h4>
+                    <ol>
+                        <li>Fork the repository on GitHub</li>
+                        <li>Create a feature branch from main</li>
+                        <li>Make your changes with proper tests</li>
+                        <li>Ensure all tests pass</li>
+                        <li>Submit a pull request with detailed description</li>
+                    </ol>
+
+                    <h4>Code Standards</h4>
+                    <ul>
+                        <li>Follow PEP 8 for Python code</li>
+                        <li>Use ESLint for JavaScript code</li>
+                        <li>Write comprehensive tests</li>
+                        <li>Document your changes</li>
+                        <li>Follow semantic commit messages</li>
+                    </ul>
+                </div>
+
+                <!-- Next Steps -->
+                <div class="next-actions">
+                    <a href="api.html" class="action-card">
+                        <h3>📖 API Reference</h3>
+                        <p>Explore the complete API documentation with examples and authentication details.</p>
+                    </a>
+                    <a href="https://github.com/alfastack-in/fleet_booking" class="action-card">
+                        <h3>🐙 GitHub Repository</h3>
+                        <p>Access the source code, report issues, and contribute to the project.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <div class="toc-content">
+                <h3>On This Page</h3>
+                <ul>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#development-setup">Development Setup</a></li>
+                    <li><a href="#project-structure">Project Structure</a></li>
+                    <li><a href="#custom-doctypes">Custom DocTypes</a></li>
+                    <li><a href="#api-development">API Development</a></li>
+                    <li><a href="#frontend">Frontend Customization</a></li>
+                    <li><a href="#testing">Testing</a></li>
+                    <li><a href="#deployment">Deployment</a></li>
+                    <li><a href="#contributing">Contributing</a></li>
+                </ul>
+                
+                <div class="toc-next">
+                    <strong>Next</strong>
+                    <a href="changelog.html" class="btn-next">What's New →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="installation.html">Installation</a>
+                <a href="user-guide.html">User Guide</a>
+                <a href="api.html">API</a>
+                <a href="developer-guide.html">Developer Guide</a>
+                <a href="changelog.html">What's New</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Made by Alfastack Solutions Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

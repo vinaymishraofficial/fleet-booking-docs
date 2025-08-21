@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Guide - Fleet Booking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Complete user guide for Fleet Booking System">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-content">
+            <div class="topbar-left">
+                <h1 class="topbar-title">🚗 Fleet Booking System</h1>
+                <span class="topbar-tagline">Enterprise Fleet Management Platform</span>
+            </div>
+            <div class="topbar-right">
+                <nav class="topbar-nav">
+                    <a href="index.html">Overview</a>
+                    <a href="user-guide.html">User Guide</a>
+                    <a href="api.html">API</a>
+                    <a href="installation.html" class="btn-primary">Install Now</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="docs-layout">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Fleet Booking System</h3>
+                    <ul>
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li><a href="#user-roles">User Roles</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Get Started</h3>
+                    <ul>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="#getting-started" class="active">User Guide</a></li>
+                        <li><a href="api.html">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Advanced</h3>
+                    <ul>
+                        <li><a href="developer-guide.html">Developer Guide</a></li>
+                        <li><a href="changelog.html">What's New</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="docs-content">
+            <div class="doc-container">
+                <h1>User Guide</h1>
+                <p class="lead">Learn how to effectively use Fleet Booking System to manage your organization's fleet operations.</p>
+
+                <section id="getting-started">
+                    <h2>Getting Started</h2>
+                    <p>Fleet Booking System provides a comprehensive solution for managing vehicle bookings, driver assignments, and fleet operations. This guide will walk you through the key features and workflows.</p>
+                </section>
+
+                <section id="user-roles">
+                    <h2>User Roles & Permissions</h2>
+                    <p>The system supports four main user roles, each with specific permissions and capabilities:</p>
+                    
+                    <div class="role-sections">
+                        <div class="role-section">
+                            <h3>👩‍💼 Employee</h3>
+                            <p>Regular employees who need to book vehicles for business trips.</p>
+                            <h4>Capabilities:</h4>
+                            <ul>
+                                <li>Create new fleet booking requests</li>
+                                <li>Set pickup, stopover, and drop locations</li>
+                                <li>Schedule trip dates and times</li>
+                                <li>Track request status</li>
+                                <li>View their booking history</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-section">
+                            <h3>👨‍💼 Fleet Manager</h3>
+                            <p>Supervisors responsible for approving bookings and managing fleet resources.</p>
+                            <h4>Capabilities:</h4>
+                            <ul>
+                                <li>Review and approve/reject booking requests</li>
+                                <li>Assign vehicles to approved requests</li>
+                                <li>Assign drivers to trips</li>
+                                <li>Monitor overall fleet utilization</li>
+                                <li>Generate fleet reports</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-section">
+                            <h3>🧑‍✈️ Driver</h3>
+                            <p>Professional drivers who operate the fleet vehicles.</p>
+                            <h4>Capabilities:</h4>
+                            <ul>
+                                <li>Access driver dashboard with real-time features</li>
+                                <li>View assigned trips and schedules</li>
+                                <li>Start and end trips with GPS tracking</li>
+                                <li>Update trip status and location</li>
+                                <li>View completed trip history</li>
+                                <li>Live location streaming</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-section">
+                            <h3>🛰️ Dispatcher</h3>
+                            <p>Operations personnel who monitor and coordinate fleet activities.</p>
+                            <h4>Capabilities:</h4>
+                            <ul>
+                                <li>View all approved and assigned trips</li>
+                                <li>Monitor real-time fleet status</li>
+                                <li>Track vehicle and driver assignments</li>
+                                <li>Coordinate trip logistics</li>
+                                <li>Generate operational reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="employee-workflow">
+                    <h2>Employee Workflow</h2>
+                    
+                    <h3>Creating a Fleet Booking Request</h3>
+                    <ol>
+                        <li><strong>Navigate to Fleet Booking:</strong> Go to Fleet Booking System > Employee Fleet Booking Request</li>
+                        <li><strong>Create New Request:</strong> Click "Add Employee Fleet Booking Request"</li>
+                        <li><strong>Fill Basic Information:</strong>
+                            <ul>
+                                <li>Trip purpose and description</li>
+                                <li>Preferred trip date and time</li>
+                                <li>Number of passengers</li>
+                                <li>Special requirements</li>
+                            </ul>
+                        </li>
+                        <li><strong>Set Route with Google Maps:</strong>
+                            <ul>
+                                <li>Use the interactive map to set pickup location</li>
+                                <li>Add multiple stopovers if needed</li>
+                                <li>Set final destination</li>
+                                <li>Review the calculated route and distance</li>
+                            </ul>
+                        </li>
+                        <li><strong>Submit Request:</strong> Review all details and submit for approval</li>
+                    </ol>
+
+                    <div class="alert alert-info">
+                        <h4>💡 Pro Tip</h4>
+                        <p>Use the route optimization feature to automatically arrange stopovers in the most efficient order, saving time and fuel costs.</p>
+                    </div>
+                </section>
+
+                <section id="manager-workflow">
+                    <h2>Fleet Manager Workflow</h2>
+                    
+                    <h3>Processing Booking Requests</h3>
+                    <ol>
+                        <li><strong>Review Pending Requests:</strong> Check Employee Fleet Booking Request list for "Pending" status</li>
+                        <li><strong>Evaluate Request:</strong> Review trip details, route, and business justification</li>
+                        <li><strong>Make Decision:</strong>
+                            <ul>
+                                <li><strong>Approve:</strong> If request is valid and resources are available</li>
+                                <li><strong>Reject:</strong> If request doesn't meet criteria or resources unavailable</li>
+                            </ul>
+                        </li>
+                        <li><strong>Assign Resources (for approved requests):</strong>
+                            <ul>
+                                <li>Select appropriate vehicle from available fleet</li>
+                                <li>Assign qualified driver</li>
+                                <li>Set any special instructions</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h3>Vehicle and Driver Assignment</h3>
+                    <p>When assigning resources, consider:</p>
+                    <ul>
+                        <li><strong>Vehicle Type:</strong> Match vehicle size and features to trip requirements</li>
+                        <li><strong>Driver Availability:</strong> Ensure driver is available for the scheduled time</li>
+                        <li><strong>Driver Qualifications:</strong> Match driver skills to trip complexity</li>
+                        <li><strong>Fuel Efficiency:</strong> Choose appropriate vehicle for distance and route</li>
+                    </ul>
+                </section>
+
+                <section id="driver-dashboard">
+                    <h2>Driver Dashboard</h2>
+                    <p>The driver dashboard is a powerful, real-time interface for professional drivers with advanced features:</p>
+                    
+                    <h3>Key Features</h3>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>🗺️ Interactive Maps</h4>
+                            <p>Google Maps integration with real-time GPS tracking and route visualization</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>📊 Live Analytics</h4>
+                            <p>Real-time metrics including speed, distance, accuracy, and trip progress</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>📱 Trip Management</h4>
+                            <p>Start/end trips, update locations, and manage trip status</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>📈 Performance Tracking</h4>
+                            <p>Comprehensive trip history and performance analytics</p>
+                        </div>
+                    </div>
+
+                    <h3>Using the Driver Dashboard</h3>
+                    <ol>
+                        <li><strong>Access Dashboard:</strong> Go to Fleet Booking System > Driver Dashboard page</li>
+                        <li><strong>Select Trip:</strong> Choose from assigned trips in the dropdown</li>
+                        <li><strong>Review Route:</strong> Check pickup, stopovers, and destination details</li>
+                        <li><strong>Start Trip:</strong> Click "Start Trip" to begin GPS tracking</li>
+                        <li><strong>Monitor Progress:</strong> Watch real-time stats and location updates</li>
+                        <li><strong>End Trip:</strong> Click "End Trip" when journey is complete</li>
+                    </ol>
+
+                    <div class="alert alert-success">
+                        <h4>🎯 Advanced Features</h4>
+                        <p>The driver dashboard includes live location streaming, completed trip history, and performance analytics - features typically found in enterprise-grade fleet management systems.</p>
+                    </div>
+                </section>
+
+                <section id="dispatcher-portal">
+                    <h2>Dispatcher Portal</h2>
+                    <p>The dispatcher portal provides centralized fleet monitoring capabilities:</p>
+                    
+                    <h3>Monitoring Fleet Operations</h3>
+                    <ol>
+                        <li><strong>Access Portal:</strong> Go to Fleet Booking System > Fleet Bookings Dispatcher Portal</li>
+                        <li><strong>View Active Trips:</strong> See all approved and assigned trips</li>
+                        <li><strong>Monitor Assignments:</strong> Track which vehicles and drivers are allocated</li>
+                        <li><strong>Coordinate Operations:</strong> Ensure smooth fleet operations</li>
+                    </ol>
+
+                    <h3>Key Information Available</h3>
+                    <ul>
+                        <li>Real-time trip status</li>
+                        <li>Vehicle assignments</li>
+                        <li>Driver allocations</li>
+                        <li>Trip schedules and routes</li>
+                        <li>Resource utilization metrics</li>
+                    </ul>
+                </section>
+
+                <section id="best-practices">
+                    <h2>Best Practices</h2>
+                    
+                    <h3>For Employees</h3>
+                    <ul>
+                        <li>Submit requests with adequate lead time</li>
+                        <li>Provide clear trip purpose and justification</li>
+                        <li>Use accurate pickup and drop locations</li>
+                        <li>Include all necessary stopovers in the initial request</li>
+                        <li>Update requests promptly if plans change</li>
+                    </ul>
+
+                    <h3>For Fleet Managers</h3>
+                    <ul>
+                        <li>Review requests promptly to enable planning</li>
+                        <li>Consider fuel efficiency in vehicle assignments</li>
+                        <li>Match driver skills to trip requirements</li>
+                        <li>Monitor fleet utilization patterns</li>
+                        <li>Maintain clear approval criteria</li>
+                    </ul>
+
+                    <h3>For Drivers</h3>
+                    <ul>
+                        <li>Check assigned trips before starting shifts</li>
+                        <li>Use the driver dashboard for all trip operations</li>
+                        <li>Keep GPS location services enabled</li>
+                        <li>Update trip status promptly</li>
+                        <li>Report any issues immediately</li>
+                    </ul>
+                </section>
+
+                <section id="troubleshooting">
+                    <h2>Common Issues & Solutions</h2>
+                    
+                    <div class="faq-item">
+                        <h4>Google Maps not loading</h4>
+                        <p>Ensure Google Maps API key is configured in Fleet Booking Settings and has required permissions.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Driver dashboard not tracking location</h4>
+                        <p>Check browser location permissions and ensure GPS is enabled on the device.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Cannot assign vehicle to request</h4>
+                        <p>Verify the request is in "Approved" status and check vehicle availability for the requested dates.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Email notifications not sent</h4>
+                        <p>Check SMTP configuration in ERPNext settings and verify notification templates are active.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="toc-content">
+                <h3>In this article</h3>
+                <ul>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#user-roles">User Roles</a></li>
+                    <li><a href="#employee-workflow">Employee Workflow</a></li>
+                    <li><a href="#manager-workflow">Manager Workflow</a></li>
+                    <li><a href="#driver-dashboard">Driver Dashboard</a></li>
+                    <li><a href="#dispatcher-portal">Dispatcher Portal</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="changelog.html">What's New</a>
+                <a href="faq.html">FAQ</a>
+                <a href="developer-guide.html">Developer Guide</a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Made by Alfastack Solutions Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

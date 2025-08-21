@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Fleet Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-content">
+            <div class="topbar-left">
+                <h1 class="topbar-title">Fleet Booking System</h1>
+                <span class="topbar-tagline">Professional Fleet Management for ERPNext</span>
+            </div>
+            <nav class="topbar-nav">
+                <a href="index.html">Home</a>
+                <a href="installation.html">Installation</a>
+                <a href="user-guide.html">User Guide</a>
+                <a href="api.html">API Reference</a>
+                <a href="developer-guide.html">Developer Guide</a>
+                <a href="changelog.html">What's New</a>
+                <a href="faq.html" class="active">FAQ</a>
+                <a href="#" class="btn-primary">Install Now</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Getting Started</h3>
+                    <ul>
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Reference</h3>
+                    <ul>
+                        <li><a href="api.html">API Reference</a></li>
+                        <li><a href="developer-guide.html">Developer Guide</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="changelog.html">What's New</a></li>
+                        <li><a href="faq.html" class="active">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="docs-content">
+            <div class="doc-container">
+                <h1>Frequently Asked Questions</h1>
+                <p class="lead">Find answers to common questions about Fleet Booking System installation, configuration, and usage.</p>
+
+                <!-- General Questions -->
+                <div class="api-section">
+                    <h3>🌟 General Questions</h3>
+                    
+                    <div class="faq-item">
+                        <h4>What is Fleet Booking System?</h4>
+                        <p>Fleet Booking System is a comprehensive fleet management application built for ERPNext. It enables organizations to manage vehicle bookings, track fleet usage, monitor drivers, and optimize routes with real-time GPS tracking capabilities.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What are the system requirements?</h4>
+                        <p>The system requires ERPNext version 13 or later, Python 3.8+, and MariaDB/MySQL. For GPS tracking features, you'll need a Google Maps API key. The system is compatible with Linux, macOS, and Windows environments.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Is Fleet Booking System free to use?</h4>
+                        <p>Yes! Fleet Booking System is open-source software released under the MIT License. You can use, modify, and distribute it freely. However, you may need to pay for third-party services like Google Maps API based on your usage.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I customize the system for my organization?</h4>
+                        <p>Absolutely! The system is built on ERPNext framework, making it highly customizable. You can modify workflows, add custom fields, create custom reports, and integrate with other systems. Check our <a href="developer-guide.html">Developer Guide</a> for detailed instructions.</p>
+                    </div>
+                </div>
+
+                <!-- Installation & Setup -->
+                <div class="api-section">
+                    <h3>🚀 Installation & Setup</h3>
+                    
+                    <div class="faq-item">
+                        <h4>How do I install Fleet Booking System?</h4>
+                        <p>Installation is straightforward with our automated installer. Run <code>bench get-app fleet_booking</code> followed by <code>bench --site your-site install-app fleet_booking</code>. For detailed steps, see our <a href="installation.html">Installation Guide</a>.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Do I need a Google Maps API key?</h4>
+                        <p>Yes, for GPS tracking and route optimization features, you need a Google Maps API key with the following APIs enabled: Maps JavaScript API, Geocoding API, and Directions API. You can get a key from the Google Cloud Console.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How do I configure the system after installation?</h4>
+                        <p>After installation, go to Fleet Booking Settings to configure Google Maps API, notification settings, and workflow parameters. You can also set up vehicle and driver masters in the ERPNext system.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I migrate from another fleet management system?</h4>
+                        <p>Yes, you can migrate data from other systems using ERPNext's data import tools. We recommend starting with vehicle and driver data, followed by historical booking records. Contact our support team for migration assistance.</p>
+                    </div>
+                </div>
+
+                <!-- Features & Functionality -->
+                <div class="api-section">
+                    <h3>⚡ Features & Functionality</h3>
+                    
+                    <div class="faq-item">
+                        <h4>What types of vehicles can I manage?</h4>
+                        <p>The system supports all types of vehicles including cars, trucks, buses, motorcycles, and specialized vehicles. Each vehicle can have custom attributes like fuel type, capacity, maintenance schedules, and insurance details.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How does the GPS tracking work?</h4>
+                        <p>GPS tracking integrates with Google Maps to provide real-time vehicle location updates. Drivers can update their location through the driver dashboard, and fleet managers can monitor all vehicles on a centralized map interface.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can employees book vehicles in advance?</h4>
+                        <p>Yes, employees can submit booking requests for future dates through the employee portal. The system checks availability, prevents conflicts, and routes requests through the configured approval workflow.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How are drivers assigned to bookings?</h4>
+                        <p>Drivers can be assigned automatically based on availability and proximity, or manually by fleet managers. The system considers driver schedules, vehicle assignments, and workload distribution for optimal assignments.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What reports are available?</h4>
+                        <p>The system includes comprehensive reports for vehicle utilization, driver performance, fuel consumption, maintenance schedules, booking analytics, and cost analysis. Custom reports can be created using ERPNext's report builder.</p>
+                    </div>
+                </div>
+
+                <!-- Troubleshooting -->
+                <div class="api-section">
+                    <h3>🔧 Troubleshooting</h3>
+                    
+                    <div class="faq-item">
+                        <h4>GPS tracking is not working. What should I check?</h4>
+                        <p>First, verify your Google Maps API key is valid and has the required APIs enabled. Check browser permissions for location access, ensure stable internet connectivity, and verify the API key is correctly configured in Fleet Booking Settings.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Booking conflicts are not being detected. Why?</h4>
+                        <p>This usually happens due to timezone issues or incorrect time formats. Ensure your ERPNext system timezone matches your operational timezone, and verify that booking times are in the correct format (HH:MM:SS).</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Email notifications are not being sent. How to fix?</h4>
+                        <p>Check your ERPNext email settings first. Ensure SMTP is configured correctly, then verify notification templates are active in Fleet Booking Settings. Also check the email queue for failed messages in ERPNext.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>The driver dashboard is loading slowly. How to optimize?</h4>
+                        <p>Slow loading can be due to large datasets or network issues. Consider implementing data pagination, optimizing database queries, and enabling browser caching. For large fleets, consider archiving old booking records.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How do I backup my fleet data?</h4>
+                        <p>Use ERPNext's built-in backup functionality: <code>bench --site your-site backup --with-files</code>. We recommend daily automated backups and testing restore procedures regularly. Store backups in multiple locations for redundancy.</p>
+                    </div>
+                </div>
+
+                <!-- API & Integration -->
+                <div class="api-section">
+                    <h3>🔌 API & Integration</h3>
+                    
+                    <div class="faq-item">
+                        <h4>Can I integrate with other systems?</h4>
+                        <p>Yes, the system provides comprehensive REST APIs for integration with HR systems, accounting software, mobile apps, and third-party fleet management tools. See our <a href="api.html">API Reference</a> for detailed documentation.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Is there a mobile app available?</h4>
+                        <p>Currently, the system provides a responsive web interface optimized for mobile devices. Native iOS and Android applications are planned for future releases. The driver dashboard works excellently on mobile browsers.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How do I authenticate API requests?</h4>
+                        <p>The API supports multiple authentication methods including API keys, session-based authentication, and JWT tokens. For third-party integrations, we recommend using API keys with appropriate permissions.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I create custom API endpoints?</h4>
+                        <p>Yes, you can create custom API endpoints by adding functions to the api.py file with the <code>@frappe.whitelist()</code> decorator. See our <a href="developer-guide.html">Developer Guide</a> for examples and best practices.</p>
+                    </div>
+                </div>
+
+                <!-- Performance & Scaling -->
+                <div class="api-section">
+                    <h3>📈 Performance & Scaling</h3>
+                    
+                    <div class="faq-item">
+                        <h4>How many vehicles can the system handle?</h4>
+                        <p>The system can handle thousands of vehicles efficiently. Performance depends on your server specifications and database optimization. For large fleets (500+ vehicles), consider database indexing and caching strategies.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How to optimize system performance?</h4>
+                        <p>Enable Redis caching, optimize database queries, implement proper indexing, use CDN for static assets, and consider load balancing for high-traffic scenarios. Regular maintenance and monitoring are essential.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I run multiple instances?</h4>
+                        <p>Yes, you can deploy multiple instances for different regions or departments. Each instance can have its own database or share a common database with site-specific data isolation.</p>
+                    </div>
+                </div>
+
+                <!-- Support & Community -->
+                <div class="api-section">
+                    <h3>🤝 Support & Community</h3>
+                    
+                    <div class="faq-item">
+                        <h4>Where can I get support?</h4>
+                        <p>You can get support through multiple channels: GitHub issues for bugs and feature requests, community forums for general questions, and commercial support from Alfastack Solutions for enterprise deployments.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How can I contribute to the project?</h4>
+                        <p>We welcome contributions! You can contribute by reporting bugs, suggesting features, improving documentation, writing tests, or submitting code changes. See our <a href="developer-guide.html#contributing">Contributing Guidelines</a> for details.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Is commercial support available?</h4>
+                        <p>Yes, Alfastack Solutions provides commercial support including installation assistance, customization services, training, and priority support. Contact us for enterprise support packages.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How often is the system updated?</h4>
+                        <p>We release regular updates with new features, bug fixes, and security improvements. Major releases happen quarterly, with patch releases as needed. Subscribe to our <a href="changelog.html">What's New</a> page for update notifications.</p>
+                    </div>
+                </div>
+
+                <!-- Still Need Help -->
+                <div class="alert alert-info">
+                    <h4>Still Need Help?</h4>
+                    <p>If you couldn't find the answer to your question, please don't hesitate to reach out to our support team or community.</p>
+                </div>
+
+                <div class="next-actions">
+                    <a href="https://github.com/alfastack-in/fleet_booking/issues" class="action-card">
+                        <h3>🐛 Report an Issue</h3>
+                        <p>Found a bug or have a feature request? Report it on our GitHub repository.</p>
+                    </a>
+                    <a href="mailto:support@alfastack.in" class="action-card">
+                        <h3>📧 Contact Support</h3>
+                        <p>Need personalized help? Contact our support team for assistance.</p>
+                    </a>
+                    <a href="user-guide.html" class="action-card">
+                        <h3>📖 User Guide</h3>
+                        <p>Need detailed instructions? Check our comprehensive user guide.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <div class="toc-content">
+                <h3>On This Page</h3>
+                <ul>
+                    <li><a href="#general">General Questions</a></li>
+                    <li><a href="#installation">Installation & Setup</a></li>
+                    <li><a href="#features">Features & Functionality</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                    <li><a href="#api">API & Integration</a></li>
+                    <li><a href="#performance">Performance & Scaling</a></li>
+                    <li><a href="#support">Support & Community</a></li>
+                </ul>
+                
+                <div class="toc-next">
+                    <strong>Next</strong>
+                    <a href="installation.html" class="btn-next">Installation →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="installation.html">Installation</a>
+                <a href="user-guide.html">User Guide</a>
+                <a href="api.html">API</a>
+                <a href="developer-guide.html">Developer Guide</a>
+                <a href="changelog.html">What's New</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Made by Alfastack Solutions Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
