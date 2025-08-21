@@ -1,57 +1,291 @@
-<!-- ...existing head... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & License - Fleet Booking System Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <!-- shared shell start -->
-    <a href="#main-content" class="skip-link">Skip to content</a>
-    <header class="topbar">
-        <div class="topbar-left">
-            <div class="brand"><span class="brand-icon">🚘</span><span class="brand-text">Fleet Booking Docs</span></div>
-            <div class="search-wrap"><input id="docSearch" type="search" placeholder="Search pages…" aria-label="Search documentation"></div>
-        </div>
-        <div class="topbar-right">
-            <button id="themeToggle" class="icon-btn" title="Toggle theme">🌙</button>
-            <button id="menuToggle" class="icon-btn mob-only" title="Menu">☰</button>
-        </div>
-    </header>
-
-    <div class="docs-layout with-topbar">
-        <aside class="sidebar">
-            <div class="sidebar-title">Fleet Booking Docs</div>
-            <nav aria-label="Primary">
-                <ul>
-                    <li><a href="index.html" data-page="home">Home</a></li>
-                    <li class="nav-section">Getting Started</li>
-                    <li><a href="introduction.html">Introduction</a></li>
-                    <li><a href="installation.html">Installation</a></li>
-                    <li><a href="user-guide.html">User Guide</a></li>
-                    <li class="nav-section">For Developers</li>
-                    <li><a href="developer-guide.html">Developer Guide</a></li>
-                    <li><a href="api.html">API Reference</a></li>
-                    <li class="nav-section">Reference</li>
-                    <li><a href="glossary.html">Glossary</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="changelog.html">Changelog</a></li>
-                    <li class="nav-section">Project</li>
-                    <li><a href="about.html">About / License</a></li>
-                </ul>
-            </nav>
-        </aside>
-
-        <main class="docs-content" id="main-content" role="main">
-            <div class="doc-container">
-                <!-- ...existing about.html content (leave as-is) ... -->
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-content">
+            <div class="topbar-left">
+                <h1 class="topbar-title">Fleet Booking System</h1>
+                <span class="topbar-tagline">Complete Vehicle Management Solution</span>
             </div>
-        </main>
-
-        <aside class="on-this-page">
-            <div class="on-this-page-title">On This Page</div>
-            <ul id="on-this-page-list"></ul>
-        </aside>
+            <nav class="topbar-nav">
+                <a href="index.html">Home</a>
+                <a href="installation.html">Installation</a>
+                <a href="user-guide.html">User Guide</a>
+                <a href="api.html">API Reference</a>
+                <a href="developer-guide.html">Developer Guide</a>
+                <a href="changelog.html">What's New</a>
+                <a href="faq.html">FAQ</a>
+                <a href="installation.html" class="btn-primary">Install Now</a>
+            </nav>
+        </div>
     </div>
 
-    <footer class="footer-bar" role="contentinfo">
-        <nav class="footer-nav" aria-label="Documentation page navigation"></nav>
-        <div class="footer-meta">&copy; 2025 Alfastack Solution Private Limited</div>
-    </footer>
-    <script src="main.js"></script>
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Getting Started</h3>
+                    <ul>
+                        <li><a href="introduction.html">Introduction</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Development</h3>
+                    <ul>
+                        <li><a href="developer-guide.html">Developer Guide</a></li>
+                        <li><a href="api.html">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="changelog.html">What's New</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="docs-content">
+            <div class="doc-container">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <h1>About Fleet Booking System</h1>
+                    <p class="lead">Learn about the project, licensing information, and how to contribute to the Fleet Booking System.</p>
+                </div>
+
+                <!-- In This Article Section -->
+                <div class="toc-inline">
+                    <h3>In this article</h3>
+                    <ul>
+                        <li><a href="#project-overview">Project Overview</a></li>
+                        <li><a href="#team">Development Team</a></li>
+                        <li><a href="#license">License Information</a></li>
+                        <li><a href="#contributing">Contributing</a></li>
+                        <li><a href="#support">Support & Contact</a></li>
+                        <li><a href="#acknowledgments">Acknowledgments</a></li>
+                    </ul>
+                </div>
+
+                <!-- Project Overview Section -->
+                <section id="project-overview">
+                    <h2>Project Overview</h2>
+                    <p>Fleet Booking System is an enterprise-grade vehicle management solution designed to streamline fleet operations for organizations of all sizes. Built as a native ERPNext application, it provides comprehensive tools for booking management, real-time tracking, and driver coordination.</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>🎯 Mission</h4>
+                            <p>To simplify fleet management through intuitive interfaces and automated workflows that reduce operational overhead.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>👁️ Vision</h4>
+                            <p>To become the leading open-source fleet management solution for ERPNext ecosystem.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>⚡ Values</h4>
+                            <p>Open source, user-centric design, robust functionality, and continuous innovation.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Development Team Section -->
+                <section id="team">
+                    <h2>Development Team</h2>
+                    <p>Fleet Booking System is developed and maintained by <strong>Alfastack Solutions Private Limited</strong>, a technology company specializing in enterprise software solutions.</p>
+                    
+                    <div class="role-card">
+                        <h4>🏢 Alfastack Solutions Pvt Ltd</h4>
+                        <p>We are dedicated to creating innovative business solutions that help organizations optimize their operations and achieve their goals through technology.</p>
+                        <ul>
+                            <li>Enterprise software development</li>
+                            <li>ERP customization and implementation</li>
+                            <li>Digital transformation consulting</li>
+                            <li>Custom application development</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- License Information Section -->
+                <section id="license">
+                    <h2>License Information</h2>
+                    <p>Fleet Booking System is released under the MIT License, making it free to use, modify, and distribute for both commercial and non-commercial purposes.</p>
+                    
+                    <div class="alert alert-info">
+                        <h4>MIT License</h4>
+                        <p>Copyright (c) 2025 Alfastack Solutions Private Limited</p>
+                        <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+                        <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+                        <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+                    </div>
+                </section>
+
+                <!-- Contributing Section -->
+                <section id="contributing">
+                    <h2>Contributing</h2>
+                    <p>We welcome contributions from the community! Here's how you can help improve Fleet Booking System:</p>
+                    
+                    <div class="step-guide">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Report Issues</h3>
+                                <p>Found a bug or have a feature request? Please open an issue on our GitHub repository with detailed information.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Submit Pull Requests</h3>
+                                <p>Fork the repository, make your changes, and submit a pull request. Please follow our coding standards and include tests.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Improve Documentation</h3>
+                                <p>Help us improve this documentation by fixing errors, adding examples, or translating content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Support & Contact Section -->
+                <section id="support">
+                    <h2>Support & Contact</h2>
+                    <p>Need help or have questions? We're here to assist you:</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>📧 Email Support</h4>
+                            <p>Technical support and inquiries</p>
+                            <strong>support@alfastack.com</strong>
+                        </div>
+                        <div class="feature-item">
+                            <h4>💼 Business Inquiries</h4>
+                            <p>Partnership and business opportunities</p>
+                            <strong>business@alfastack.com</strong>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🐛 Bug Reports</h4>
+                            <p>GitHub Issues for bug reports and feature requests</p>
+                            <strong>GitHub Repository</strong>
+                        </div>
+                        <div class="feature-item">
+                            <h4>💬 Community</h4>
+                            <p>Join our community discussions</p>
+                            <strong>Community Forum</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Acknowledgments Section -->
+                <section id="acknowledgments">
+                    <h2>Acknowledgments</h2>
+                    <p>We extend our gratitude to the following projects and communities that make Fleet Booking System possible:</p>
+                    
+                    <div class="role-sections">
+                        <div class="role-section">
+                            <h3>🚀 Core Technologies</h3>
+                            <ul>
+                                <li><strong>ERPNext/Frappe Framework</strong> - The robust foundation that powers our application</li>
+                                <li><strong>Python</strong> - The programming language that drives our backend logic</li>
+                                <li><strong>JavaScript</strong> - For dynamic frontend interactions and real-time features</li>
+                                <li><strong>MariaDB/MySQL</strong> - Reliable database management system</li>
+                            </ul>
+                        </div>
+                        <div class="role-section">
+                            <h3>🗺️ External Services</h3>
+                            <ul>
+                                <li><strong>Google Maps API</strong> - Location services and mapping capabilities</li>
+                                <li><strong>OpenStreetMap</strong> - Alternative mapping data and services</li>
+                                <li><strong>Various notification services</strong> - Email and SMS delivery providers</li>
+                            </ul>
+                        </div>
+                        <div class="role-section">
+                            <h3>🛠️ Development Tools</h3>
+                            <ul>
+                                <li><strong>GitHub</strong> - Version control and collaboration platform</li>
+                                <li><strong>VS Code</strong> - Primary development environment</li>
+                                <li><strong>Docker</strong> - Containerization and deployment</li>
+                                <li><strong>Various testing frameworks</strong> - Quality assurance tools</li>
+                            </ul>
+                        </div>
+                        <div class="role-section">
+                            <h3>🎨 Design & UI</h3>
+                            <ul>
+                                <li><strong>Bootstrap</strong> - CSS framework for responsive design</li>
+                                <li><strong>FontAwesome</strong> - Icon library for user interface</li>
+                                <li><strong>Google Fonts</strong> - Typography and font resources</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Call to Action -->
+                <div class="next-actions">
+                    <a href="installation.html" class="action-card">
+                        <h3>🚀 Get Started</h3>
+                        <p>Ready to install? Follow our comprehensive installation guide.</p>
+                    </a>
+                    <a href="user-guide.html" class="action-card">
+                        <h3>📖 Learn More</h3>
+                        <p>Explore all features with our detailed user guide.</p>
+                    </a>
+                    <a href="developer-guide.html" class="action-card">
+                        <h3>⚙️ Contribute</h3>
+                        <p>Join the development with our contributor guidelines.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <div class="toc-content">
+                <h3>On this page</h3>
+                <ul>
+                    <li><a href="#project-overview">Project Overview</a></li>
+                    <li><a href="#team">Development Team</a></li>
+                    <li><a href="#license">License Information</a></li>
+                    <li><a href="#contributing">Contributing</a></li>
+                    <li><a href="#support">Support & Contact</a></li>
+                    <li><a href="#acknowledgments">Acknowledgments</a></li>
+                </ul>
+                <div class="toc-next">
+                    <strong>Next</strong>
+                    <a href="installation.html" class="btn-next">Installation Guide →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="installation.html">Installation</a>
+                <a href="user-guide.html">User Guide</a>
+                <a href="api.html">API Reference</a>
+                <a href="developer-guide.html">Developer Guide</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Made by Alfastack Solutions Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
